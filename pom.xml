@@ -12,11 +12,16 @@
     <artifactId>game-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>game-config</name>
+    <packaging>pom</packaging>
     <description>game-config</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <docker.image.prefix>game</docker.image.prefix>
     </properties>
+    <modules>
+        <module>configserver</module>
+        <module>eurekaserver</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
