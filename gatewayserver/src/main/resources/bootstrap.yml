@@ -4,10 +4,14 @@ spring:
     cloud:
         config: 
             uri: http://configserver:8071
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: "http://localhost:9098/realms/microservices"
 
 logging:
   level:
     com.netflix: WARN
     org.springframework.web: WARN
     com.optimagrowth: DEBUG
-            
